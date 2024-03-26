@@ -8,6 +8,7 @@ class DoublyLinkedList:
   def __init__(self):
     self.head = None
     self.tail = None
+    self.size = 0
 
   def append(self, data):
     new_node = Node(data)
@@ -18,6 +19,7 @@ class DoublyLinkedList:
       self.tail.next = new_node
       new_node.prev = self.tail
       self.tail = new_node
+    self.size += 1
 
   def prepend(self, data):
     new_node = Node(data)
